@@ -1,5 +1,5 @@
 const knex = require('knex');
-const config = require('.../knexfile.js');
+const config = require('../knexfile.js');
 const db = knex(config.development);
 
 //Schemes
@@ -18,10 +18,12 @@ module.exports =
     remove
 };
 
+//works
 function find() {
     return db('schemes');
 };
 
+//works
 function findById(id) {
     return db('schemes')
     .where({ id })
@@ -41,6 +43,7 @@ function add(scheme){
     });
 };
 
+//works
 function update(changes, id) {
     return db('schemes')
     .where({ id })

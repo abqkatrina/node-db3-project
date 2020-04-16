@@ -35,6 +35,7 @@ function findSteps(id) {
     .where({ id });
 };
 
+//works BUT doesn't return scheme
 function add(scheme){
     return db('schemes')
     .insert(scheme)
@@ -43,13 +44,14 @@ function add(scheme){
     });
 };
 
-//works
+//works BUT doesn't return scheme
 function update(changes, id) {
     return db('schemes')
     .where({ id })
     .update(changes);
 };
 
+//works
 function remove(id){
     return db('schemes')
     .where({ id })
